@@ -229,6 +229,9 @@ dist
 # gitignore template for NW.js projects
 # website: https://nwjs.io/
 
+# Cache
+cache/
+
 # Seen in standard and sdk versions
 credits.html
 locales/
