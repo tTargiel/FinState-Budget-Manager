@@ -1,0 +1,19 @@
+.single {
+    display: flex;
+
+    .singleContainer {
+        flex: 5;
+        padding: 16px 20px;
+        // align-self: center;
+
+        .singleTitle {
+            width: 100%;
+            font-size: 32px;
+            color: gray;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}

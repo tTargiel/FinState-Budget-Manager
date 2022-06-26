@@ -1,7 +1,7 @@
 {
   "name": "finstate-app",
   "version": "1.0.0",
-  "description": "FinState is an budget manager created in MERN stack. I created it as an final project for my classes at the University of Wroclaw.",
+  "description": "FinState is an budget manager created in MERN stack. I created it as an final project for my classes at the University of Wrocław.",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",

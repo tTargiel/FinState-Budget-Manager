@@ -1,0 +1,18 @@
+.dashboard {
+    display: flex;
+
+    .dashboardContainer {
+        flex: 5;
+        align-self: center;
+
+        .widgets, .charts {
+            display: flex;
+            padding: 10px 20px;
+            gap: 20px;
+        }
+
+        .charts {
+            padding: 10px 20px;
+        }
+    }
+}

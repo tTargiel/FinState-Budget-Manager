@@ -1,0 +1,51 @@
+.datatable {
+    height: 90vh;
+    width: 100%;
+    // padding: 0 20px;
+
+    .positive {
+        color: green;
+    }
+
+    .negative {
+        color: red;
+    }
+
+    .MuiDataGrid-columnHeaderTitle {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .MuiDataGrid-cell {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .cellWithImg {
+        display: flex;
+        align-items: center;
+
+        .cellImg {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 16px;
+        }
+    }
+
+    .cellAction {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .addButton {
+            padding: 2px 5px;
+            border-radius: 5px;
+            font-weight: 600;
+            color: darkblue;
+            border: 1px dotted rgba(0, 0, 139, 0.596);
+            cursor: pointer;
+        }
+    }
+}

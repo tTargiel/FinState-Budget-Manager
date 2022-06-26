@@ -1,0 +1,86 @@
+.sidebar {
+    flex: 1;
+    border-right: 0.5px solid lightgray;
+    min-height: 100vh;
+    background-color: white;
+
+    .top a {
+        height: 96px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        font-weight: bold;
+        color: darkslateblue;
+        text-decoration: none;
+
+        .icon {
+            font-size: 36px;
+        }
+
+        .logo {
+            margin-left: 8px;
+        }
+    }
+
+    hr {
+        height: 0;
+        border: 0.5px solid lightgray;
+    }
+
+    .center,
+    .bottom {
+        padding-left: 12px;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            .title {
+                font-size: 12px;
+                font-weight: bold;
+                color: #999;
+                margin-top: 32px;
+                margin-bottom: 4px;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                padding: 4px 12px;
+                cursor: pointer;
+
+                a, div {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    background-color: #ecefff;
+                }
+
+                .icon {
+                    font-size: 24px;
+                    color: darkslateblue;
+                }
+
+                span {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #666;
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-height: 512px) {
+        .bottom {
+            position: fixed;
+            width: 15.75%;
+            bottom: 32px;
+        }
+    }
+}

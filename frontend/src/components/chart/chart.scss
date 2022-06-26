@@ -1,0 +1,21 @@
+.chart {
+    flex: 6;
+    -webkit-box-shadow: 2px 4px 8px 1px rgba(196, 196, 196, 0.5);
+    box-shadow: 2px 4px 8px 1px rgba(196, 196, 196, 0.5);
+    padding: 12px;
+    border-radius: 12px;
+    color: rgb(128, 128, 128);
+
+    .responsive {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .title {
+        margin-bottom: 16px;
+    }
+
+    .chartGrid {
+        stroke: lightgray;
+    }
+}

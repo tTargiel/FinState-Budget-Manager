@@ -1,38 +1,51 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-import Dashboard from './pages/Dashboard'
-import Login from './pages/Login'
-import Register from './pages/Register'
-import Wallet from './pages/Wallet'
-import Bank from './pages/Bank'
-import Crypto from './pages/Crypto'
-import Stocks from './pages/Stocks'
-import { useSelector } from 'react-redux'
-import LeftPane from './components/LeftPane'
-import Header from './components/Header'
+import "react-toastify/dist/ReactToastify.css";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import { SnackbarProvider } from "notistack";
+// import { ToastContainer } from "react-toastify";
+
+import Crypto from "./pages/crypto/Crypto";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Login from "./pages/login/Login";
+import New from "./pages/new/New";
+import Portfolio from "./pages/portfolio/Portfolio";
+import Register from "./pages/register/Register";
+import Single from "./pages/single/Single";
+import Stocks from "./pages/stocks/Stocks";
+import { userInputs } from "./formSource";
 
 function App() {
-  const { user } = useSelector((state) => state.auth)
-
   return (
-    <>
-      <Router>
-        { user ? <LeftPane /> : <Header /> }
+    <div className="App">
+      <SnackbarProvider maxSnack={3}>
+        <BrowserRouter>
           <Routes>
-            <Route path='/' element={<Dashboard />} />
-            <Route path='/wallet' element={<Wallet />} />
-            <Route path='/bank' element={<Bank />} />
-            <Route path='/crypto' element={<Crypto />} />
-            <Route path='/stocks' element={<Stocks />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/register' element={<Register />} />
+            <Route path="/">
+              <Route index element={<Dashboard />} />
+              <Route path="/crypto">
+                <Route index element={<Crypto />} />
+                <Route path=":coinId" element={<Single />} />
+              </Route>
+              <Route path="/login" element={<Login />} />
+              <Route path="/portfolio">
+                <Route index element={<Portfolio />} />
+                <Route path="new" element={<New inputs={userInputs} />} />
+              </Route>
+              <Route path="/register" element={<Register />} />
+              <Route path="/stocks">
+                <Route index element={<Stocks />} />
+                <Route path=":stockId" element={<Single />} />
+              </Route>
+            </Route>
           </Routes>
-      </Router>
-      <ToastContainer />
-    </>
-  )
+        </BrowserRouter>
+      </SnackbarProvider>
+      {/* <ToastContainer /> */}
+    </div>
+  );
 }
 
-export default App
+export default App;
