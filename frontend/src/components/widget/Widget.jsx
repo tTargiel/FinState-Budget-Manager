@@ -15,9 +15,6 @@ const Widget = ({ type, number, percent }) => {
     data = {
       title: "USER",
       isMoney: false,
-      link: "See all users",
-      amount: number,
-      diff: percent,
       icon: <PersonOutlineRoundedIcon className="icon" style={{ backgroundColor: "rgba(128, 0, 128, 0.2)", color: "purple", }} />,
     };
     break;
@@ -43,7 +40,7 @@ const Widget = ({ type, number, percent }) => {
     break;
   case "balance":
     data = {
-      title: "FREE BALANCE",
+      title: "FREE CASH",
       isMoney: true,
       link: "View balance",
       amount: number,
@@ -63,9 +60,7 @@ const Widget = ({ type, number, percent }) => {
         <span className="link">{data.link}</span>
       </div>
       <div className="right">
-        <div className="percentage">
-          {(percent >= 0) ? <div className="positive"><KeyboardArrowUpRoundedIcon />{percent}%</div> : <div className="negative"><KeyboardArrowDownRoundedIcon />{percent}%</div>}
-        </div>
+        {(percent) ? <div className="percentage">{(percent >= 0) ? <div className="positive"><KeyboardArrowUpRoundedIcon />{percent}%</div> : <div className="negative"><KeyboardArrowDownRoundedIcon />{percent}%</div>}</div> : <div class="percentage"></div>}
         {data.icon}
       </div>
     </div>

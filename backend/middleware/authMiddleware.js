@@ -3,6 +3,15 @@ const jwt = require("jsonwebtoken");
 
 const User = require("../models/userModel");
 
+try {
+  if (!process.env.JWT_SECRET) {
+    throw new Error('JWT_SECRET environment variable is not specified.');
+  }
+} catch (error) {
+  console.log(error);
+  process.exit(1);
+}
+
 const protect = asyncHandler(async (req, res, next) => {
   let token;
 

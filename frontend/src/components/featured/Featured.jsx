@@ -22,10 +22,10 @@ const Featured = () => {
             <CircularProgress variant="determinate" sx={{ color: "lightgray", }} size={160} value={100} />
             <CircularProgress variant="determinate" size={160} sx={{ color: "dodgerblue", position: "absolute", left: 0, }} value={70} />
           </Box>
-          <span className="percent">70%</span>
+          <span className="percent">68%</span>
         </div>
         <p className="title">Total sales made today</p>
-        <p className="amount">$420</p>
+        <p className="amount">$354</p>
         <p className="description">Previous transactions processing. Last payments may not be included.</p>
         <div className="summary">
           <div className="item">

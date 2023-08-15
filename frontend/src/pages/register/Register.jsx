@@ -40,7 +40,7 @@ const Register = () => {
     }
 
     dispatch(reset());
-  }, [user, isError, isSuccess, message, navigate, dispatch]);
+  }, [user, isError, isSuccess, message, navigate, dispatch, enqueueSnackbar]);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -91,6 +91,7 @@ const Register = () => {
                 value={name}
                 placeholder='Enter your name'
                 onChange={onChange}
+                autoComplete="off"
               />
             </div>
             <div className='form-group'>
@@ -102,6 +103,7 @@ const Register = () => {
                 value={password}
                 placeholder='Enter password'
                 onChange={onChange}
+                autoComplete="off"
               />
             </div>
             <div className='form-group'>
@@ -113,6 +115,7 @@ const Register = () => {
                 value={password2}
                 placeholder='Confirm password'
                 onChange={onChange}
+                autoComplete="off"
               />
             </div>
             <div className='form-group'>

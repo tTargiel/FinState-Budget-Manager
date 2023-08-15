@@ -6,7 +6,15 @@ import { Provider } from "react-redux";
 import menuBar from "./menuBar";
 import { store } from "./app/store";
 
-menuBar();
+function isMacintosh() {
+  return navigator.platform.indexOf('Mac') > -1
+}
+
+if (isMacintosh()) {
+  menuBar();
+}
+
+isMacintosh();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

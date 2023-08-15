@@ -7,6 +7,8 @@ const { errorHandler } = require("./middleware/errorMiddleware");
 
 const port = process.env.PORT || 8080;
 
+const path = require('path');
+
 connectDB();
 
 const app = express();

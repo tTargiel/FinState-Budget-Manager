@@ -39,7 +39,7 @@ const Login = () => {
     }
 
     dispatch(reset());
-  }, [user, isError, isSuccess, message, navigate, dispatch]);
+  }, [user, isError, isSuccess, message, navigate, dispatch, enqueueSnackbar]);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -85,6 +85,7 @@ const Login = () => {
                 value={name}
                 placeholder='Enter your name'
                 onChange={onChange}
+                autoComplete="off"
               />
             </div>
             <div className='form-group'>
@@ -96,6 +97,7 @@ const Login = () => {
                 value={password}
                 placeholder='Enter password'
                 onChange={onChange}
+                autoComplete="off"
               />
             </div>
 

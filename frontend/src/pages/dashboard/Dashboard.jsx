@@ -64,10 +64,10 @@ const Dashboard = () => {
       <Sidebar />
       <div className="dashboardContainer">
         <div className="widgets">
-          <Widget type="user" number={user.name} percent="0" />
-          <Widget type="stocks" number={stocks.length} percent={((stocks.length-6)*100/6).toFixed(2)} />
+          <Widget type="user" number={user.name} />
+          <Widget type="stocks" number={stocks.length} percent={((stocks.length-9)*100/9).toFixed(2)} />
           <Widget type="earnings" number={sum(stocks).toFixed(2)} percent={((sum(stocks).toFixed(2)-free(stocks).toFixed(2)*3)*10/free(stocks).toFixed(2)*2).toFixed(2)} />
-          <Widget type="balance" number={free(stocks).toFixed(2)} percent={((free(stocks).toFixed(2)*1.12-free(stocks).toFixed(2))*-10/free(stocks).toFixed(2)).toFixed(2)} />
+          <Widget type="balance" number={free(stocks).toFixed(2)} percent={((free(stocks).toFixed(2)*1.00-free(stocks).toFixed(2))*-10/free(stocks).toFixed(2)).toFixed(2)} />
         </div>
         <div className="charts">
           <Featured />
